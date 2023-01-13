@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark" style="width: 230px;">
-    <ul class="nav nav-pills flex-column mb-auto">
+  <div class="d-flex flex-column flex-shrink p-3 bg-dark" style=" width: 230px;">
+    <ul class="nav nav-pills flex-column mb-auto" style = "position: fixed;">
       <li class="nav-item">
         <nuxt-link  exact active-class = 'active' to ="/" class="nav-link text-white" aria-current="page">
           Главная
@@ -28,6 +28,4 @@
       </li>
     </ul>
   </div>
-
-
 </template>
