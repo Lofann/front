@@ -2,10 +2,10 @@
 
     <div>
 
-    <h1>{{posts.title}}</h1>
+    <h1 class = "text-center mb-5">{{posts.title}}</h1>
 
     <div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="text-center overflow-hidden">
       <img :src = posts.image style="height: 512px">
       <div class="my-3 p-3">
         <p class="lead">{{posts.text}}</p>
@@ -28,8 +28,5 @@ export default {
     }
   }
 }
-
-
-
 
 </script>

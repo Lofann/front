@@ -2,7 +2,8 @@ from rest_framework import viewsets, permissions
 from .serializers import HomeSerializer, DemandSerializer, GeographySerializer,SkillsSerializer
 from .models import Home, Demand, Skills, Geography
 from rest_framework.response import Response
-
+from rest_framework.views import APIView
+from  .utils import get_vacancies
 
 class HomeViewSet(viewsets.ModelViewSet):
     serializer_class = HomeSerializer
@@ -27,3 +28,4 @@ class SkillsViewSet(viewsets.ModelViewSet):
     queryset = Skills.objects.all()
 
     permission_classes = [permissions.AllowAny]
+
