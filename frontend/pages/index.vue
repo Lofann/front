@@ -1,19 +1,16 @@
 <template class>
 
-    <div class = 'container mt-5 bg-light'>
-
-    <h1>Руководитель ИТ-проектов</h1>
-
     <div>
 
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+    <h1>{{posts.title}}</h1>
 
+    <div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <img :src = posts.image style="height: 512px">
+      <div class="my-3 p-3">
+        <p class="lead">{{posts.text}}</p>
       </div>
+
     </div>
   </div>
     </div>
@@ -21,7 +18,18 @@
 </template>
 
 <script>
-export default {
 
+import axios from "axios";
+export default {
+  async asyncData(ctx) {
+    const { data } = await axios.get(`http://127.0.0.1:8000/api/home/`);
+    return {
+      posts: data[0]
+    }
+  }
 }
+
+
+
+
 </script>
