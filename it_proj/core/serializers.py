@@ -4,7 +4,7 @@ from .models import Home, Demand, Skills, Geography
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Home
-        fields = ('title', 'text', 'img')
+        fields = ('title', 'text', 'image')
 
 class DemandSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,6 +19,6 @@ class GeographySerializer(serializers.ModelSerializer):
 class SkillsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skills
-        fields = ('title', 'text', 'img')
+        fields = ('title', 'text', 'graph')
 
 
